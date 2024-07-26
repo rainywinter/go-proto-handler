@@ -17,6 +17,8 @@ go build -o client main.go
 ```
 
 
+![预览图](./image/image.png)
+
 ### 消息约定
 resquest => response 
 request: 奇数
