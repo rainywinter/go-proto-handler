@@ -7,6 +7,8 @@ import (
 	"google.golang.org/protobuf/proto"
 )
 
+// 该部分逻辑已经迁移到codec package下
+
 func Encode(id int32, seq uint64, v interface{}, encodeErr error) ([]byte, error) {
 	m := &Message{
 		Id:  MsgId(id),
