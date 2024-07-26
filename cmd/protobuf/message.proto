@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+// package message_pb;
+option go_package = "./message_pb";
+
+enum MsgId {
+  _ = 0;
+  Login = 1;
+  Hello = 3;
+  x = 5;
+}
+
+message Message {
+  MsgId id = 1;
+  uint64 seq = 2;
+  string err_msg = 4;
+  bytes body = 10;
+}
+
+message LoginRq { int32 id = 1; }
+
+message LoginRs { bool ok = 1; }
+
+message Hello_Rq {
+  string name = 1;
+  string msg = 2;
+}
+
+message Hello_Rs { string msg = 1; }
